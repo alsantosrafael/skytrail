@@ -13,17 +13,13 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/v1/dags")
-public class DagController {
+@RequestMapping("/api/v1/dag-runs")
+public class DagRunController {
 
 	@Autowired
 	private DagService dagService;
 
-	@GetMapping()
-	public List<FetchDagResponse> list() {
-		return dagService.findAll();
-	}
-	@PostMapping("/{dagId}/run")
+	@PostMapping("/{dagId}/start")
 	public void execute(@PathVariable UUID dagId) {
 		System.out.println("Running: " + dagId);
 	}
