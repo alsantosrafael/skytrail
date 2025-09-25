@@ -1,0 +1,1 @@
+ALTER TABLE task_run ADD COLUMN output_ref TEXT;

@@ -52,6 +52,9 @@ public class TaskRun {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
+    @Column(name = "output_ref")
+    private String outputRef;
+
     public TaskRun() {}
 
     public TaskRun(Task task, DagRun dagRun) {
@@ -122,6 +125,14 @@ public class TaskRun {
 
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public String getOutputRef() {
+        return outputRef;
+    }
+
+    public void setOutputRef(String outputRef) {
+        this.outputRef = outputRef;
     }
 
 }
