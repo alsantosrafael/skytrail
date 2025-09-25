@@ -42,6 +42,13 @@ docker-compose up postgres -d
 
 ### DAGs
 - `GET /api/v1/dags` - List all DAGs
+- `POST /api/v1/dags` - Create a new DAG
+
+### Tasks
+- `GET /api/v1/dags/{dagId}/tasks` - List tasks for a DAG
+- `POST /api/v1/dags/{dagId}/tasks` - Create tasks for a DAG (bulk creation with automatic linear dependencies)
+
+### DAG Runs
 - `POST /api/v1/dags/{dagId}/run` - Execute a DAG
 
 ## Database Schema
