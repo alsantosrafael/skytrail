@@ -6,6 +6,7 @@ A DAG orchestration system with workers, scheduler, and orchestrator built with 
 
 SkyTrail is a workflow orchestration platform that allows you to define, schedule, and execute Directed Acyclic Graphs (DAGs) of tasks. Each DAG can contain multiple tasks with dependencies, and the system manages their execution through dedicated workers controlled by an orchestrator and scheduler.
 
+![High level architecture](src/main/resources/static/architecture.png)
 ## Tech Stack
 
 - **Java 21** with Eclipse Temurin
